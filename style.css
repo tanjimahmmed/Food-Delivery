@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    .before-custom {
+        position: relative;
+        overflow-x: hidden;
+    }
+    
+    .before-custom::after {
+        position: absolute;
+        content: '';
+        right: 0;
+        top: 0;
+        width: 50%;
+        height: 100%;
+        background: #F8F8F8;
+        z-index: -1;
+        transform: translateX(158px);
+    }
+    .cus-y {
+        padding-top: 6px;
+        padding-bottom: 9px;
+    }
+    .active-row span {
+        color: #0D0805;
+    }
+    .active-row {
+        border-bottom: 2px solid #00A55B;
+    }
+    .form-select {
+        -moz-padding-start: calc(.75rem - 3px);
+        background-image: url(../assets/img/drop.svg);
+        background-position: right 0.75rem center;
+        background-size: 16px 12px;
+    }
+    .custome-hover .price-quantity {
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.3s ease;
+    }
+    
+    .custome-hover:hover .price-quantity {
+        opacity: 1;
+        visibility: visible;
+    }
+    .shop {
+        display: grid;
+        grid-template-columns: repeat(2, 235px);
+        justify-content: center;
+        /* gap: 30px; */
+    }
+    .shop .item:nth-child(even) {
+        margin-left: 10px;
+    }
+    
+    .shop .item:nth-child(odd) {
+        margin-right: 10px;
+    }
+    .cus-h {
+        height: 50px !important;
+    }
+    @media only screen and (min-width: 1200px) and (max-width: 1359px) {
+
+    }
+    @media only screen and (min-width: 992px) and (max-width: 1200px) {
+        .before-custom::after {
+            transform: translateX(124px);
+        }
+        .shop {
+            grid-template-columns: repeat(2, 170px);
+        }
+    }
+    @media only screen and (min-width: 768px) and (max-width: 991px) {
+        .before-custom::after {
+            background: transparent;
+        }
+    }
+    @media only screen and (max-width: 767px) {
+        .before-custom::after {
+            background: transparent;
+        }
+        .w-searchWidth {
+            width: 220px;
+        }
+        .shop {
+            grid-template-columns: repeat(1, 100%);
+        }
+        .shop .item:nth-child(odd) {
+            margin-right: 0;
+        }
+        .shop .item:nth-child(even) {
+            margin-left: 0;
+        }
+    }
+}

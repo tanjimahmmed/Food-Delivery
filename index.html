@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/img/delivery.png" type="image/x-icon">
+    <title>Food Delivery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./tailwind/output.css">
+</head>
+<body class="before-custom">
+
+    <div class="border-b">
+        <!-- top content -->
+        <div class="container w-full flex xl:flex-row lg:flex-row md:flex-col sm:flex-col flex-col justify-between items-center xl:space-x-20 lg:space-x-20 md:space-x-0 sm:space-x-0 space-x-0">
+            <div class="flex justify-between items-center xl:w-3/5 lg:w-3/5 md:w-full sm:w-full w-full pt-9 pb-9">
+                <div class="w-6">
+                    <button type="button"><img src="./assets/img/menu.png" alt=""></button>
+                </div>
+                <div>
+                    <form action="#" class="relative">
+                        <input class="w-searchWidth bg-placeHold px-5 py-3 xl:pl-14 lg:pl-14 md:pl-14 sm:pl-11 pl-11 rounded-lg placeholder:text-placeHoldInner text-topTxt capitalize focus:ring-secondary focus:ring-1 ring-1 ring-transparent focus:outline-none outline-none transition-all ease-linear" type="text" placeholder="search...">
+                        <button class="absolute xl:left-5 lg:left-5 md:left-5 sm:left-3 left-3 w-6 top-2/4 -translate-y-2/4" type="button"><img src="./assets/img/search.png" alt=""></button>
+                    </form>
+                </div>
+            </div>
+            <!-- profile -->
+            <div class="bg-placeHold rounded-tl-xl rounded-tr-xl xl:w-2/5 lg:w-2/5 md:w-full sm:w-full w-full xl:pt-9 lg:pt-9 md:pt-9 sm:pt-5 pt-5 xl:pb-9 lg:pb-9 md:pb-9 sm:pb-5 pb-5">
+                <div class="flex justify-between items-center xl:px-9 lg:px-5 md:px-5 sm:px-5 px-5">
+                    <div class="flex items-center justify-start space-x-4">
+                        <!-- img -->
+                        <div>
+                            <img class="w-10 h-10 rounded-full object-contain" src="./assets/img/avatar.jpg" alt="">
+                        </div>
+                        <!-- info -->
+                        <div>
+                            <h4 class="text-topTxt text-lg font-bold">Tanjim</h4>
+                            <a href="#" class="text-sm text-placeHoldInner font-medium hover:text-secondary transition-all ease-linear">Sign out</a>
+                        </div>
+                    </div>
+                    <!-- cart total -->
+                    <div>
+                        <div id="cartAmount" class="xl:text-xl lg:text-xl md:text-xl sm:text-lg text-lg xl:w-11 lg:w-11 md:w-11 sm:w-8 w-8 xl:h-11 lg:h-11 md:h-11 sm:h-8 h-8 bg-secondary text-center flex justify-center items-center text-white font-normal rounded-tr-xl rounded-bl-xl" id="cartAmount">1</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="container flex xl:flex-row lg:flex-row md:flex-col sm:flex-col flex-col xl:space-x-20 lg:space-x-20 md:space-x-0 sm:space-x-0 space-x-0 pb-10">
+        <div class="xl:w-3/5 lg:w-3/5 md:w-full sm:w-full w-full">
+            <div class="bg-bannerBg rounded-xl flex items-center justify-between xl:px-7 lg:px-4 md:px-4 sm:px-4 px-4 py-8 mt-9 mb-9 xl:flex-row lg:flex-row md:flex-row sm:flex-row flex-col xl:text-left lg:text-left md:text-left sm:text-left text-center">
+                <div class="xl:w-1/4 lg:w-1/4 md:w-1/4 sm:w-1/4 w-full">
+                    <img class="w-40 xl:-mb-14 lg:-mb-12 md:-mb-14 sm:-mb-14 mb-5 mx-auto" src="./assets/img/delivery.png" alt="">
+                </div>
+                <div class="xl:w-2/4 lg:w-2/4 md:w-2/4 sm:w-2/4 w-full xl:mb-0 mb-5">
+                    <h3 class="text-greencus xl:text-2xl lg:text-xl md:text-2xl sm:text-base text-xl font-bold mb-1">Save on delivery today</h3>
+                    <h5 class="text-placeHoldInner/80 xl:text-base lg:text-sm md:text-base sm:text-base text-sm font-medium">Share your invite code to get free delivery</h5>
+                </div>
+                <div class="xl:w-1/4 lg:w-1/4 md:w-1/4 sm:w-1/4 w-full">
+                    <a href="#" class="inline-block text-greencus hover:bg-greencus hover:text-white hover:border-greencus transition-all ease-linear border border-btnBorder xl:text-lg lg:text-sm md:text-lg sm:text-sm text-lg font-semibold xl:px-5 lg:px-4 md:px-5 sm:px-4 px-4 cus-y rounded-tr-2xl rounded-bl-2xl">Learn more</a>
+                </div>
+            </div>
+
+            <div class="pt-4">
+                <div class="border-b flex xl:flex-nowrap lg:flex-wrap md:flex-wrap sm:flex-wrap flex-wrap justify-between" id="food-main">
+                    <button class="flex items-center justify-start border-b-2 border-b-transparent space-x-2 xl:pb-4 lg:pb-2 md:pb-4 sm:pb-2 pb-2 xl:px-4 lg:px-1 text-center trigger-btn">
+                        <img class="w-5" src="./assets//img/icon-1.png" alt="">
+                        <span class="text-placeHoldInner/90 text-sm font-semibold">All</span>
+                    </button>
+                    <button class="flex items-center justify-start border-b-2 border-b-transparent space-x-2 xl:pb-4 lg:pb-2 md:pb-4 sm:pb-2 pb-2 xl:px-4 lg:px-1 text-center trigger-btn">
+                        <img class="w-5" src="./assets//img/icon-2.png" alt="">
+                        <span class="text-placeHoldInner/90 text-sm font-semibold">Burgers</span>
+                    </button>
+                    <button class="flex items-center justify-start border-b-2 border-b-transparent space-x-2 xl:pb-4 lg:pb-2 md:pb-4 sm:pb-2 pb-2 xl:px-4 lg:px-1 text-center trigger-btn">
+                        <img class="w-5" src="./assets//img/icon-3.png" alt="">
+                        <span class="text-placeHoldInner/90 text-sm font-semibold">Asian</span>
+                    </button>
+                    <button class="flex items-center justify-start border-b-2 border-b-transparent space-x-2 xl:pb-4 lg:pb-2 md:pb-4 sm:pb-2 pb-2 xl:px-4 lg:px-1 text-center trigger-btn">
+                        <img class="w-5" src="./assets//img/icon-4.png" alt="">
+                        <span class="text-placeHoldInner/90 text-sm font-semibold">Italian</span>
+                    </button>
+                    <button class="flex items-center justify-start border-b-2 border-b-transparent space-x-2 xl:pb-4 lg:pb-2 md:pb-4 sm:pb-2 pb-2 xl:px-4 lg:px-1 text-center trigger-btn">
+                        <img class="w-5" src="./assets//img/icon-5.png" alt="">
+                        <span class="text-placeHoldInner/90 text-sm font-semibold">Mexican</span>
+                    </button>
+                    <button class="flex items-center justify-start border-b-2 border-b-transparent space-x-2 xl:pb-4 lg:pb-2 md:pb-4 sm:pb-2 pb-2 xl:px-4 lg:px-1 text-center trigger-btn">
+                        <img class="w-5" src="./assets//img/icon-6.png" alt="">
+                        <span class="text-placeHoldInner/90 text-sm font-semibold">Pizza</span>
+                    </button>
+                    <button class="flex items-center justify-start border-b-2 border-b-transparent space-x-2 xl:pb-4 lg:pb-2 md:pb-4 sm:pb-2 pb-2 xl:px-4 lg:px-1 text-center trigger-btn">
+                        <img class="w-5" src="./assets//img/icon-7.png" alt="">
+                        <span class="text-placeHoldInner/90 text-sm font-semibold">Sushi</span>
+                    </button>
+                    <button class="flex items-center justify-start border-b-2 border-b-transparent space-x-2 xl:pb-4 lg:pb-2 md:pb-4 sm:pb-2 pb-2 xl:px-4 lg:px-1 text-center trigger-btn active-row">
+                        <img class="w-5" src="./assets//img/icon-8.png" alt="">
+                        <span class="text-placeHoldInner/90 text-sm font-semibold">Vegan</span>
+                    </button>
+                </div>
+            </div>
+
+            <div>
+                <div class="flex xl:flex-row lg:flex-row md:flex-row sl:flex-row flex-col justify-between items-center mt-7">
+                    <div class="flex items-center space-x-5 xl:mb-0 lg:mb-0 md:mb-0 sm:mb-5 mb-5"><img class="xl:w-8 lg:w-6 md:w-6 sm:w-6 w-6" src="./assets/img/vegan-big.png" alt=""> <h2 class="inline-block xl:text-3xl lg:text-2xl md:text-2xl sm:text-2xl text-xl font-bold"> Vegan</h2></div>
+                    <div>
+                        <div class="flex justify-center">
+                            <div class="xl:w-96 flex justify-end">
+                              <select class="form-select appearance-none
+                                block
+                                w-60
+                                px-3
+                                py-3
+                                text-base
+                                font-normal
+                                text-gray-700
+                                bg-white bg-clip-padding bg-no-repeat
+                                border border-solid
+                                rounded-lg
+                                transition
+                                ease-in-out
+                                m-0
+                                focus:text-gray-700 focus:bg-white focus:border-secondary focus:outline-none cursor-pointer" aria-label="Default select example">
+                                  <option selected><strong><span>$</span> Price:</strong> Low to high</option>
+                                  <option value="1"><strong><span>$</span> Price:</strong> high to Low</option>
+                              </select>
+                            </div>
+                          </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex xl:flex-row lg:flex-row md:flex-row sm:flex-col flex-col xl:space-x-5 lg:space-x-5 md:space-x-5 sm:space-x-0 space-x-0">
+                <div class="xl:w-2/3 lg:w-2/3 md:w-2/3 sm:w-full w-full">
+                    <div class="shop" id="shop">
+                        
+                    </div>
+                </div>
+                <div class="xl:w-2/6 lg:w-2/6 md:w-2/6 sm:w-full w-full">
+                    <div class="pt-6">
+                        <img src="./assets/img/map.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="xl:w-2/5 lg:w-2/5 md:w-full sm:w-full w-full xl:px-9 lg:px-9 md:px-0 sm:px-0 px-0">
+            <div class="mt-9 mb-9 flex justify-between xl:bg-white lg:bg-white md:bg-placeHold sm:bg-bannerBg bg-bannerBg rounded-xl px-5 py-6">
+               <div class="flex justify-between items-center xl:space-x-5 lg:space-x-2 md:space-x-5 sm:space-x-2 space-x-2">
+                    <div>
+                        <img class="w-9" src="./assets/img/mastercard-icon.png" alt="">
+                    </div>
+                    <div>
+                        <h5 class="text-placeHoldInner/90 uppercase text-sm font-semibold">Payment</h5>
+                        <h4 class="xl:text-xl lg:text-base md:text-lg sm:text-base text-base font-bold text-topTxt mb-1">Mastercard **** 8204</h4>
+                    </div>
+               </div>
+                <div>
+                    <a href="#" class="text-placeHoldInner/90 capitalize text-xs font-semibold hover:text-greencus transition-all ease-linear">Edit</a>
+                </div>
+            </div>
+
+            <div>
+                <h2 class="inline-block text-3xl font-bold mb-7">My order</h2>
+                <div id="listItem">
+                    
+                </div>
+                <div class="w-full border-b mt-8 mb-5 block"></div>
+                <div class="flex justify-between items-center mb-10" id="totalAmount">
+                    
+                </div>
+                <div class="flex items-center justify-start space-x-4 border rounded-xl px-5 py-4 xl:mb-36 lg:mb-36 md:mb-20 sm:mb-10 mb-10">
+                    <div>
+                        <img class="w-14" src="./assets/img/icon-fast-clock.png" alt="">
+                    </div>
+                    <div>
+                        <h5 class="text-placeHoldInner/90 uppercase text-sm font-semibold">Fast Delivery</h5>
+                        <h4 class="xl:text-lg lg:text-base md:text-lg sm:text-base text-base font-bold text-topTxt mb-1">Order delivery within one hour</h4>
+                    </div>
+                </div>
+                <div>
+                    <button type="button" class="bg-greencus hover:bg-greencus/95 transition-all ease-linear w-full text-center text-white xl:text-lg lg:text-lg md:text-lg sm:text-lg text-base font-semibold rounded-tr-xl rounded-bl-xl relative xl:py-3.5 lg:py-3.5 md:py-3.5 sm:py-3.5 py-3 px-4" id="checkOut">Checkout <span class="absolute top-2/4 -translate-y-2/4 right-5"><img class="w-5" src="./assets/img/arrow-right.png" alt=""></span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

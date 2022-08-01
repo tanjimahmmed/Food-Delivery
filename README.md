@@ -1,0 +1,1 @@
+This is little web application based on food delivery using of vanilla JavaScript and Tailwindcss
